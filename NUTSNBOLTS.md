@@ -83,7 +83,9 @@ Here is an example of consolidation via BlockCommit
     +------------(R/O)-+   +------------------(R/O)-+   +------------------(R/W)-+
 
 
-Running in consolidation BlockCommit mode will "copy" backing images content into the current image.
+Running in consolidation BlockCommit mode will "copy" current image content into the previous backing image. 
+Previous backing image then becomes current image.
+Repeating, copying current image into previous backing image, until beginning of chain.
 
                                                               Current image
                    +<-block-pull--+         +<-block-pull--+        |
