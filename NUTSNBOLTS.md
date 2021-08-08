@@ -77,13 +77,14 @@ Here is an example of consolidation via BlockCommit
 
                                                                Current image
                                                                      |
-                                                                     v
+                                                                     v./backups/misti/vms/
     +------------------+   +------------------------+   +------------------------+
     |    disk.qcow2    |<--| disk.bimg-<timestamp1> |<--| disk.bimg-<timestamp2> |
     +------------(R/O)-+   +------------------(R/O)-+   +------------------(R/W)-+
 
 
-Running in consolidation BlockCommit mode will "copy" backing images content into the current image.
+Running in consolidation BlockCommit mode will "copy" current image content into the preceding backing image,
+repeating until the first backing image becomes the current image.
 
                                                               Current image
                    +<-block-pull--+         +<-block-pull--+        |
