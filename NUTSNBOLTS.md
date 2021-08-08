@@ -77,7 +77,7 @@ Here is an example of consolidation via BlockCommit
 
                                                                Current image
                                                                      |
-                                                                     v./backups/misti/vms/
+                                                                     v
     +------------------+   +------------------------+   +------------------------+
     |    disk.qcow2    |<--| disk.bimg-<timestamp1> |<--| disk.bimg-<timestamp2> |
     +------------(R/O)-+   +------------------(R/O)-+   +------------------(R/W)-+
